@@ -29,7 +29,7 @@ def getcarte():
     return msg
 
 def printtime():
-    print('현시각 시:', datetime.now().hour, end='')
+    print('확인시각:', datetime.now().hour, end='')
     print(' :', datetime.now().minute, end='')
     print(' :', datetime.now().second)
 
@@ -77,8 +77,8 @@ while(1):
             targettime = -1
 
             #중식일때
-            if ((datetime.now().hour == 12 or datetime.now().hour == 16) 
-            and datetime.now().minute == 25):
+            if ((datetime.now().hour == 12 or datetime.now().hour == 18) 
+            and datetime.now().minute == 20):
                 tmsg = '*급식 식단표' + getcarte()
             else:
                 #1~7교시일때
@@ -88,7 +88,7 @@ while(1):
                     targettime = 20
 
                 #5~7교시일때
-                elif (13 <= datetime.now().hour <= 15):
+                elif (13 <= datetime.now().hour <= 15)각
                     nowclassnum = datetime.now().hour - 8
                     nowclass = ttable[nowclassnum - 1]
                     targettime = 10
