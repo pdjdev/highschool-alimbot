@@ -88,13 +88,13 @@ while(1):
                     targettime = 20
 
                 #5~7교시일때
-                elif (13 <= datetime.now().hour <= 15)각
+                elif (13 <= datetime.now().hour <= 15):
                     nowclassnum = datetime.now().hour - 8
                     nowclass = ttable[nowclassnum - 1]
-                    targettime = 10
+                    targettime = 20
 
                 if (datetime.now().minute == targettime):
-                    tmsg = '*시간표 알림*\n' + str(nowclassnum) + '교시 과목: ' + ttable
+                    tmsg = '*시간표 알림*\n' + str(nowclassnum) + '교시 과목: ' + ttable[nowclassnum - 1]
                     
 
             if not (tmsg == ''):
